@@ -1,0 +1,21 @@
+body {
+    font-family: 'Inter', sans-serif;
+    overflow: hidden; /* Prevents scrollbars from prank elements */
+}
+
+/* Animation for the runaway button */
+.fly-away {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Pop-up animation */
+@keyframes pop-in {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.popup {
+    animation: pop-in 0.3s ease-out;
+    z-index: 100; /* Ensures popups are always on the top layer */
+    cursor: not-allowed; /* Indicates the whole thing is clickable, but you shouldn't! */
+}
